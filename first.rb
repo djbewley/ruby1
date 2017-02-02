@@ -1,10 +1,17 @@
-print "Enter your name: "
-name = gets.chomp
-puts"Hello " << name 
+print("What score did you get? ")
+score = gets.chomp.to_i
+if score >= 90
+        grade = "A"
+        message = "Great Job"
+elsif score >= 80
+        grade = "B"
+elsif score >= 70
+        grade = "C"
+elsif score >= 60
+        grade = "D"
+else 
+    grade = "F"
+end
 
-
-print "Enter the number of cups: "
-cups = gets.chomp
-cups = cups.to_i
-ounces = cups * 8
-puts "That is #{ounces} ounces."
+puts "You earned a #{grade}."
+    
